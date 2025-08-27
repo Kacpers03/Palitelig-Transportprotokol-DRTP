@@ -1,17 +1,26 @@
-Dette programmet kan kjøres både som en server og en klient men hele koden er i en fil. For å kjøre denne koden må man ha Python3 installert på maksinen sin. 
+DATA2410 - Pålitelig Transportprotokoll (DRTP)
 
-Man kjører serverkoden ved å bruke følgende kommando i terminalen: python3 app.py -s -i 127.0.0.1 -p 1024 
+Om prosjektet
 
-Man kjører denne klientkoden ved å bruke følgende kommando i terminalen: python3 app.py -c -f photo.jpg -i 127.0.0.1 -p 1024 
+Dette programmet implementerer en enkel pålitelig filoverføring over UDP, kalt DATA2410 Reliable Transport Protocol (DRTP).
+Programmet kan kjøre som server (mottaker) eller klient (sender).
 
-Man må bruke to forskjellige terminaler for hver av dem. 
+DRTP sikrer:
 
-Man kan bytte variablene som ip adresse, portnummer, eller fil. Det spørs hvor og hva man vil kjøre.
+Pålitelig levering
+In-order mottak
+Håndtering av pakketap ved hjelp av Go-Back-N (GBN)
+Hvordan kjøre programmet
 
-De to tingen vil gjøre at klienten som kobler til serveren på den IP_adressen man valgte og porten og sender den angitte filen. 
+Krav
 
-Andre argumenter:
-Argumente -2 eller --winodw angir størrelsen på glidevinduet. 
--d eller --discard angir et spesifikt sekvensnummer som skal kastes for testing. 
+Python 3 installert på maskinen
+Åpne terminal / kommandolinje i prosjektmappen
+Viktig
 
-For å tese programmet kan man kjøre server og klienten på samme måte. Bare at da legger man til -w eller -d så det blir :python3 app.py -c -f photo.jpg, -i 127.0.0.1 -p 1024 -w 3 (eksempel, det kan være et annet tall spørs hvilken vindusstørrelse man vil bruke)
+Serveren må være startet før klienten kan koble til.
+Hvis ikke vil klienten feile når den prøver å etablere tilkobling.
+
+Starte server
+
+python3 application.py -s -i <ip_adresse> -p <portnummer>
