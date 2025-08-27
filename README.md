@@ -29,11 +29,15 @@ Hvis ikke vil klienten feile når den prøver å etablere tilkobling.
 
 ```bash
 python3 app.py -s -i <ip_adresse> -p <portnummer>
+```
+```bash
 python3 app.py -s -i 127.0.0.1 -p 1024 
 ```
 
 ### Starte server
 ```bash
 python3 app.py -c -f <filename.jpg> -i <ip_adresse> -p <portnummer>
+```
+```bash
 python3 app.py -c -f photo.jpg -i 127.0.0.1 -p 1024 
 ```
