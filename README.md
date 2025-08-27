@@ -15,7 +15,7 @@ DRTP sikrer:
 
 ### Krav
 - Python 3 installert på maskinen
-- Åpne terminal / kommandolinje i prosjektmappen
+- Åpne 2 terminal / kommandolinje i prosjektmappen en for serveren og en for klient
 
 ---
 
@@ -28,4 +28,12 @@ Hvis ikke vil klienten feile når den prøver å etablere tilkobling.
 ### Starte server
 
 ```bash
-python3 application.py -s -i <ip_adresse> -p <portnummer>
+python3 app.py -s -i <ip_adresse> -p <portnummer>
+python3 app.py -s -i 127.0.0.1 -p 1024 
+```
+
+### Starte server
+```bash
+python3 app.py -c -f <filename.jpg> -i <ip_adresse> -p <portnummer>
+python3 app.py -c -f photo.jpg -i 127.0.0.1 -p 1024 
+```
